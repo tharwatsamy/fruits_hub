@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/constants.dart';
+import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_text_field.dart';
+import 'package:fruits_hub/features/auth/presentation/views/widgets/have_an_account_widget.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widgets/terms_and_conditions.dart';
 
 class SignupViewBody extends StatelessWidget {
@@ -8,26 +10,26 @@ class SignupViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: kHorizintalPadding),
+        padding: const EdgeInsets.symmetric(horizontal: kHorizintalPadding),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 24,
             ),
-            CustomTextFormField(
+            const CustomTextFormField(
                 hintText: 'الاسم كامل', textInputType: TextInputType.name),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            CustomTextFormField(
+            const CustomTextFormField(
                 hintText: 'البريد الإلكتروني',
                 textInputType: TextInputType.emailAddress),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            CustomTextFormField(
+            const CustomTextFormField(
               suffixIcon: Icon(
                 Icons.remove_red_eye,
                 color: Color(0xffC9CECF),
@@ -35,10 +37,21 @@ class SignupViewBody extends StatelessWidget {
               hintText: 'كلمة المرور',
               textInputType: TextInputType.visiblePassword,
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            TermsAndConditionsWidget(),
+            const TermsAndConditionsWidget(),
+            const SizedBox(
+              height: 30,
+            ),
+            CustomButton(
+              onPressed: () {},
+              text: 'إنشاء حساب جديد',
+            ),
+            const SizedBox(
+              height: 26,
+            ),
+            const HaveAnAccountWidget(),
           ],
         ),
       ),
