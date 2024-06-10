@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.6
+  dartz: ^0.10.1
   dots_indicator: ^3.0.0
   firebase_core: ^3.0.0
   flutter:
