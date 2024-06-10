@@ -41,48 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyA6fFv4QR86lvUBgRZBDTbDuIb051-0jF4',
-    appId: '1:1049325430683:web:f89b70e92015820781633e',
-    messagingSenderId: '1049325430683',
-    projectId: 'fruit-hub-2456d',
-    authDomain: 'fruit-hub-2456d.firebaseapp.com',
-    storageBucket: 'fruit-hub-2456d.appspot.com',
-    measurementId: 'G-3J1RQ317B9',
+    apiKey: 'AIzaSyD52SOM5s1kUJapsbN6RzF9KNfJEaBjlUc',
+    appId: '1:724668581926:web:6b919e2aae679a93abfee7',
+    messagingSenderId: '724668581926',
+    projectId: 'fruit-hub-69f2d',
+    authDomain: 'fruit-hub-69f2d.firebaseapp.com',
+    storageBucket: 'fruit-hub-69f2d.appspot.com',
+    measurementId: 'G-55VVR3M7XH',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB1109MVj7AICziLQr5MT3C9CVvVR5Ig_M',
-    appId: '1:1049325430683:android:6e91ea7d8c11e30681633e',
-    messagingSenderId: '1049325430683',
-    projectId: 'fruit-hub-2456d',
-    storageBucket: 'fruit-hub-2456d.appspot.com',
+    apiKey: 'AIzaSyD8qTPbFyIT_DxYA_JH1w5JdKmPXKsvhKY',
+    appId: '1:724668581926:android:d02d0055e9ccb965abfee7',
+    messagingSenderId: '724668581926',
+    projectId: 'fruit-hub-69f2d',
+    storageBucket: 'fruit-hub-69f2d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDhedvtuwtpX3srMOtQjuidvs8hyR2UQxI',
-    appId: '1:1049325430683:ios:89c31d2e82f907c881633e',
-    messagingSenderId: '1049325430683',
-    projectId: 'fruit-hub-2456d',
-    storageBucket: 'fruit-hub-2456d.appspot.com',
+    apiKey: 'AIzaSyCze2RrLntOKDAlFGN4R2NNlpS-dmXcO_4',
+    appId: '1:724668581926:ios:6468e514e75bdc98abfee7',
+    messagingSenderId: '724668581926',
+    projectId: 'fruit-hub-69f2d',
+    storageBucket: 'fruit-hub-69f2d.appspot.com',
     iosBundleId: 'com.example.fruitsHub',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDhedvtuwtpX3srMOtQjuidvs8hyR2UQxI',
-    appId: '1:1049325430683:ios:89c31d2e82f907c881633e',
-    messagingSenderId: '1049325430683',
-    projectId: 'fruit-hub-2456d',
-    storageBucket: 'fruit-hub-2456d.appspot.com',
+    apiKey: 'AIzaSyCze2RrLntOKDAlFGN4R2NNlpS-dmXcO_4',
+    appId: '1:724668581926:ios:6468e514e75bdc98abfee7',
+    messagingSenderId: '724668581926',
+    projectId: 'fruit-hub-69f2d',
+    storageBucket: 'fruit-hub-69f2d.appspot.com',
     iosBundleId: 'com.example.fruitsHub',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyA6fFv4QR86lvUBgRZBDTbDuIb051-0jF4',
-    appId: '1:1049325430683:web:042aaa2514eda6da81633e',
-    messagingSenderId: '1049325430683',
-    projectId: 'fruit-hub-2456d',
-    authDomain: 'fruit-hub-2456d.firebaseapp.com',
-    storageBucket: 'fruit-hub-2456d.appspot.com',
-    measurementId: 'G-YG3318KYD9',
+    apiKey: 'AIzaSyD52SOM5s1kUJapsbN6RzF9KNfJEaBjlUc',
+    appId: '1:724668581926:web:779a7a83dbf8774cabfee7',
+    messagingSenderId: '724668581926',
+    projectId: 'fruit-hub-69f2d',
+    authDomain: 'fruit-hub-69f2d.firebaseapp.com',
+    storageBucket: 'fruit-hub-69f2d.appspot.com',
+    measurementId: 'G-H5TWBX1HLY',
   );
+
 }
