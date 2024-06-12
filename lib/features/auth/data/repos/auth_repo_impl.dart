@@ -30,3 +30,12 @@ class AuthRepoImpl extends AuthRepo {
     }
   }
 }
+
+class BackEndAuthRepoImpl extends AuthRepo {
+  @override
+  Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
+      String email, String password, String name) {
+    // TODO: implement createUserWithEmailAndPassword
+    throw UnimplementedError();
+  }
+}

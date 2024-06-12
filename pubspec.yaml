@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_localizations:
     sdk: flutter
+  get_it: ^7.7.0
   shared_preferences: ^2.2.3
   svg_flutter: ^0.0.1
 
