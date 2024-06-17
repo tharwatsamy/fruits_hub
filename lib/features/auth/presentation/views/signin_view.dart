@@ -20,7 +20,7 @@ class SigninView extends StatelessWidget {
       ),
       child: Scaffold(
         appBar: buildAppBar(context, title: 'تسجيل دخول'),
-        body: const SigninViewBody(),
+        body: const SigninViewBodyBlocConsumer(),
       ),
     );
   }
