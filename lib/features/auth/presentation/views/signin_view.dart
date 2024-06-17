@@ -7,6 +7,7 @@ import 'package:fruits_hub/features/auth/presentation/cubits/signin_cubit/signin
 import 'package:fruits_hub/features/auth/presentation/views/widgets/signin_view_body.dart';
 
 import '../../../../core/widgets/custom_app_bar.dart';
+import 'widgets/signin_view_body_bloc_consumer.dart';
 
 class SigninView extends StatelessWidget {
   const SigninView({super.key});
