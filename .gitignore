@@ -45,3 +45,4 @@ app.*.map.json
 
 # firebase configs files 
 android/app/google-services.json
+android/app/src/main/res/values/strings.xml
