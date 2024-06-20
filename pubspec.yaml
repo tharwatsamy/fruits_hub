@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  crypto: ^3.0.3
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
   dots_indicator: ^3.0.0
@@ -43,6 +44,7 @@ dependencies:
   google_sign_in: ^6.2.1
   modal_progress_hud_nsn: ^0.5.1
   shared_preferences: ^2.2.3
+  sign_in_with_apple: ^6.1.1
   svg_flutter: ^0.0.1
 
 dev_dependencies:
