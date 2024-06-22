@@ -45,5 +45,44 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<key>GIDClientID</key>
+
+<string>724668581926-110s84hj4huks61k9lmqof5qdurc8f0q.apps.googleusercontent.com</string>
+
+<key>CFBundleURLTypes</key>
+<array>
+	<dict>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<!-- TODO Replace this value: -->
+			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+			<string>com.googleusercontent.apps.724668581926-110s84hj4huks61k9lmqof5qdurc8f0q</string>
+		</array>
+	</dict>
+</array>
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>fb669287692039317</string>
+    </array>
+  </dict>
+</array>
+<key>FacebookAppID</key>
+<string>669287692039317</string>
+<key>FacebookClientToken</key>
+<string>565fcda3def6051e9d2d8f0c1900dac8</string>
+<key>FacebookDisplayName</key>
+<string>{your-app-name}</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fbapi</string>
+  <string>fb-messenger-share-api</string>
+</array>
+
 </dict>
 </plist>
