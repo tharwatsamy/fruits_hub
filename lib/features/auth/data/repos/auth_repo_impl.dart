@@ -24,7 +24,11 @@ class AuthRepoImpl extends AuthRepo {
     try {
       user = await firebaseAuthService.createUserWithEmailAndPassword(
           email: email, password: password);
-      var userEntity = UserModel.fromFirebaseUser(user);
+      var userEntity = UserEntity(
+        name: name,
+        email: email,
+        uId: user.uid,
+      );
       await addUserData(user: userEntity);
       return right(userEntity);
     } on CustomException catch (e) {
