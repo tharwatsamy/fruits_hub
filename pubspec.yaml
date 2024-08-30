@@ -41,6 +41,7 @@ dependencies:
   flutter_facebook_auth: ^7.0.0
   flutter_localizations:
     sdk: flutter
+  flutter_svg_provider: ^1.0.7
   get_it: ^7.7.0
   google_sign_in: ^6.2.1
   modal_progress_hud_nsn: ^0.5.1
