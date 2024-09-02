@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/utils/app_images.dart';
+import 'package:svg_flutter/svg.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({super.key});
@@ -25,6 +27,17 @@ class CustomBottomNavigationBar extends StatelessWidget {
           )
         ],
       ),
+      child: const InActiveItem(image: Assets.imagesVuesaxOutlineHome),
     );
+  }
+}
+
+class InActiveItem extends StatelessWidget {
+  const InActiveItem({super.key, required this.image});
+
+  final String image;
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.asset(image);
   }
 }
