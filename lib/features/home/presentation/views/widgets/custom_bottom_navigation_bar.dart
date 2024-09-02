@@ -5,9 +5,16 @@ import 'package:svg_flutter/svg.dart';
 
 import 'naivation_bar_item.dart';
 
-class CustomBottomNavigationBar extends StatelessWidget {
+class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({super.key});
 
+  @override
+  State<CustomBottomNavigationBar> createState() =>
+      _CustomBottomNavigationBarState();
+}
+
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,10 +38,13 @@ class CustomBottomNavigationBar extends StatelessWidget {
         ],
       ),
       child: Row(
-        children: bottomNavigationBarItems.map((e) {
+        children: bottomNavigationBarItems.asMap().entries.map((e) {
+          var index = e.key;
+          var entity = e.value;
+
           return NaivgationBarItem(
-            bottomNavigationBarEntity: e,
-            isSelected: false,
+            isSelected: selectedIndex == index,
+            bottomNavigationBarEntity: entity,
           );
         }).toList(),
       ),
