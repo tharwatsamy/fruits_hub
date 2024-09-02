@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/utils/app_images.dart';
+import 'package:fruits_hub/features/home/domain/entites/bottom_navigation_bar_entity.dart';
 import 'package:svg_flutter/svg.dart';
+
+import 'naivation_bar_item.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({super.key});
@@ -27,40 +30,14 @@ class CustomBottomNavigationBar extends StatelessWidget {
           )
         ],
       ),
-      child: const Row(),
-    );
-  }
-}
-
-class InActiveItem extends StatelessWidget {
-  const InActiveItem({super.key, required this.image});
-
-  final String image;
-  @override
-  Widget build(BuildContext context) {
-    return SvgPicture.asset(image);
-  }
-}
-
-class NaivgationBarItem extends StatelessWidget {
-  const NaivgationBarItem({super.key, required this.isSelected});
-
-  final bool isSelected;
-  @override
-  Widget build(BuildContext context) {
-    return isSelected
-        ? const ActiveItem()
-        : const InActiveItem(
-            image: Assets.imagesVuesaxBoldHome,
+      child: Row(
+        children: bottomNavigationBarItems.map((e) {
+          return NaivgationBarItem(
+            bottomNavigationBarEntity: e,
+            isSelected: false,
           );
-  }
-}
-
-class ActiveItem extends StatelessWidget {
-  const ActiveItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
+        }).toList(),
+      ),
+    );
   }
 }
