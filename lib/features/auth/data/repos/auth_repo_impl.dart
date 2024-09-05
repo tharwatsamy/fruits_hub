@@ -64,6 +64,7 @@ class AuthRepoImpl extends AuthRepo {
       var user = await firebaseAuthService.signInWithEmailAndPassword(
           email: email, password: password);
       var userEntity = await getUserData(uid: user.uid);
+      await saveUserData(user: userEntity);
       return right(
         userEntity,
       );
