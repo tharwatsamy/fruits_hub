@@ -3,26 +3,18 @@ import 'package:fruits_hub/core/widgets/notification_widget.dart';
 
 import '../utils/app_text_styles.dart';
 
-AppBar buildAppBar(context, {required String title}) {
+AppBar buildAppBar() {
   return AppBar(
-    backgroundColor: Colors.white,
     actions: const [
       Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: NotificationWidget(),
-      )
-    ],
-    leading: GestureDetector(
-      onTap: () {
-        Navigator.pop(context);
-      },
-      child: const Icon(
-        Icons.arrow_back_ios_new,
       ),
-    ),
-    centerTitle: true,
-    title: Text(
-      title,
+    ],
+    backgroundColor: Colors.transparent,
+    elevation: 0,
+    title: const Text(
+      'الأكثر مبيعًا',
       textAlign: TextAlign.center,
       style: TextStyles.bold19,
     ),
