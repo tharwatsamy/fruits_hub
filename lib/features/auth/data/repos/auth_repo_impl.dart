@@ -169,8 +169,8 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future saveUserData({required UserEntity user}) {
-    // TODO: implement saveUserData
-    throw UnimplementedError();
+  Future saveUserData({required UserEntity user}) async {
+    var jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
+    await Prefs.setString(kUserData, jsonData);
   }
 }
