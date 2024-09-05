@@ -59,6 +59,7 @@ class AuthRepoImpl extends AuthRepo {
     try {
       var user = await firebaseAuthService.signInWithEmailAndPassword(
           email: email, password: password);
+     
       return right(
         UserModel.fromFirebaseUser(user),
       );

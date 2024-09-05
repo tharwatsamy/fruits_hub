@@ -18,6 +18,8 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<SigninCubit, SigninState>(
       listener: (context, state) {
         if (state is SigninSuccess) {
+
+          
           Navigator.pushNamed(context, HomeView.routeName);
         }
 

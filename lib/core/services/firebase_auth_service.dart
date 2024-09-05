@@ -8,16 +8,15 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
+import 'package:fruits_hub/features/auth/domain/entites/user_entity.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class FirebaseAuthService {
-
-
-
   Future deleteUser() async {
     await FirebaseAuth.instance.currentUser!.delete();
   }
+
   Future<User> createUserWithEmailAndPassword(
       {required String email, required String password}) async {
     try {
@@ -171,5 +170,9 @@ class FirebaseAuthService {
 
     return (await FirebaseAuth.instance.signInWithCredential(oauthCredential))
         .user!;
+  }
+
+  bool isLoggedIn() {
+    return FirebaseAuth.instance.currentUser != null;
   }
 }
