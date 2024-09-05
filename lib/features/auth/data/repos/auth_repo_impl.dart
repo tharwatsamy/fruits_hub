@@ -63,9 +63,9 @@ class AuthRepoImpl extends AuthRepo {
     try {
       var user = await firebaseAuthService.signInWithEmailAndPassword(
           email: email, password: password);
-
+      var userEntity = await getUserData(uid: user.uid);
       return right(
-        UserModel.fromFirebaseUser(user),
+        userEntity,
       );
     } on CustomException catch (e) {
       return left(ServerFailure(e.message));
@@ -88,7 +88,13 @@ class AuthRepoImpl extends AuthRepo {
       user = await firebaseAuthService.signInWithGoogle();
 
       var userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
+      var isUserExist = await databaseService.checkIfDataExists(
+          path: BackendEndpoint.isUserExists, docuementId: user.uid);
+      if (isUserExist) {
+        await getUserData(uid: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
       return right(userEntity);
     } catch (e) {
       await deleteUser(user);
@@ -149,13 +155,22 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future addUserData({required UserEntity user}) async {
     await databaseService.addData(
-        path: BackendEndpoint.addUserData,
-        data: UserModel.fromEntity(user).toMap());
+      path: BackendEndpoint.addUserData,
+      data: UserModel.fromEntity(user).toMap(),
+      documentId: user.uId,
+    );
   }
 
   @override
-  Future saveUserData({required UserEntity user}) async {
-    var jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
-    await Prefs.setString(kUserData, jsonData);
+  Future<UserEntity> getUserData({required String uid}) async {
+    var userData = await databaseService.getData(
+        path: BackendEndpoint.getUsersData, docuementId: uid);
+    return UserModel.fromJson(userData);
+  }
+
+  @override
+  Future saveUserData({required UserEntity user}) {
+    // TODO: implement saveUserData
+    throw UnimplementedError();
   }
 }
