@@ -11,6 +11,7 @@ class ProductModel {
   final num price;
   final File image;
   final bool isFeatured;
+  final num sellingCount;
   String? imageUrl;
   final int expirationsMonths;
   final bool isOrganic;
@@ -26,6 +27,7 @@ class ProductModel {
       required this.expirationsMonths,
       required this.numberOfCalories,
       required this.unitAmount,
+      required this.sellingCount,
       required this.reviews,
       required this.price,
       required this.isOrganic,
@@ -33,24 +35,26 @@ class ProductModel {
       required this.isFeatured,
       this.imageUrl});
 
-  factory ProductModel.fromEntity(ProductEntity addProductInputEntity) {
+  factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-        reviews: addProductInputEntity.reviews
-            .map((e) => ReviewModel.fromEntity(e))
-            .toList(),
-        name: addProductInputEntity.name,
-        code: addProductInputEntity.code,
-        description: addProductInputEntity.description,
-        price: addProductInputEntity.price,
-        isOrganic: addProductInputEntity.isOrganic,
-        image: addProductInputEntity.image,
-        expirationsMonths: addProductInputEntity.expirationsMonths,
-        numberOfCalories: addProductInputEntity.numberOfCalories,
-        unitAmount: addProductInputEntity.unitAmount,
-        isFeatured: addProductInputEntity.isFeatured,
-        imageUrl: addProductInputEntity.imageUrl);
+      name: json['name'],
+      code: json['code'],
+      description: json['description'],
+      expirationsMonths: json['expirationsMonths'],
+      numberOfCalories: json['numberOfCalories'],
+      unitAmount: json['unitAmount'],
+      sellingCount: json['sellingCount'],
+      reviews: json['reviews'] != null
+          ? List<ReviewModel>.from(
+              json['reviews'].map((e) => ReviewModel.fromJson(e)))
+          : [],
+      price: json['price'],
+      isOrganic: json['isOrganic'],
+      isFeatured: json['isFeatured'],
+      image: File(json['image']),
+      imageUrl: json['imageUrl'],
+    );
   }
-
   toJson() {
     return {
       'name': name,
