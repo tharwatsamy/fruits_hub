@@ -55,6 +55,23 @@ class ProductModel {
       imageUrl: json['imageUrl'],
     );
   }
+
+ ProductEntity toEntity() {
+    return ProductEntity(
+        name: name,
+        code: code,
+        description: description,
+        price: price,
+        reviews: reviews.map((e) => e.toEntity()).toList(),
+        expirationsMonths: expirationsMonths,
+        numberOfCalories: numberOfCalories,
+        unitAmount: unitAmount,
+        isOrganic: isOrganic,
+        image: image,
+        isFeatured: isFeatured,
+        imageUrl: imageUrl);
+  }
+
   toJson() {
     return {
       'name': name,
