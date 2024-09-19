@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:fruits_hub/core/entities/product_entity.dart';
 
+import '../helper_functions/get_avg_rating.dart';
 import 'review_model.dart';
 
 class ProductModel {
@@ -37,7 +38,7 @@ class ProductModel {
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-      avgRating: ,
+      avgRating: getAvgRating(json['reviews']),
       name: json['name'],
       code: json['code'],
       description: json['description'],
@@ -87,3 +88,5 @@ class ProductModel {
     };
   }
 }
+
+
