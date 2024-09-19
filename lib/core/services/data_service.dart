@@ -8,6 +8,7 @@ abstract class DatabaseService {
   Future<dynamic> getData({
     required String path,
      String? docuementId,
+     Map<String, dynamic>? query,
   });
 
 
