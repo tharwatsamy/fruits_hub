@@ -8,6 +8,7 @@ import 'package:fruits_hub/features/home/presentation/views/widgets/featured_lis
 
 import '../../../../../core/widgets/search_text_field.dart';
 import 'best_selling_grid_view.dart';
+import 'best_selling_grid_view_bloc_builder.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({
@@ -56,7 +57,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               ],
             ),
           ),
-          BestSellingGridView()
+          BestSellingGridViewBlocBuilder()
         ],
       ),
     );
