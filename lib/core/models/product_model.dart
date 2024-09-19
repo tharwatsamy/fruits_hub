@@ -38,7 +38,10 @@ class ProductModel {
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-      avgRating: getAvgRating(json['reviews']),
+      avgRating: getAvgRating(json['reviews'] != null
+          ? List<ReviewModel>.from(
+              json['reviews'].map((e) => ReviewModel.fromJson(e)))
+          : []),
       name: json['name'],
       code: json['code'],
       description: json['description'],
