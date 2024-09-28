@@ -74,6 +74,10 @@ class Assets {
   /// assets/images/splash_bottom.svg
   static const String imagesSplashBottom = "assets/images/splash_bottom.svg";
 
+  /// Assets for imagesTrash
+  /// assets/images/trash.svg
+  static const String imagesTrash = "assets/images/trash.svg";
+
   /// Assets for imagesVector
   /// assets/images/Vector.svg
   static const String imagesVector = "assets/images/Vector.svg";
