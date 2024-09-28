@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/cubits/products_cubit/products_cubit.dart';
+import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruits_hub/features/home/presentation/views/products_view.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/best_selling_header.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/products_view_header.dart';
@@ -36,7 +37,11 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
                 const SizedBox(
                   height: kTopPaddding,
                 ),
-                const CustomHomeAppBar(),
+                buildAppBar(
+                  context,
+                  title: 'المنتجات',
+                  showBackButton: false,
+                ),
                 const SizedBox(
                   height: 16,
                 ),
