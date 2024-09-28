@@ -6,6 +6,8 @@ import 'package:fruits_hub/features/home/presentation/views/products_view.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/custom_bottom_navigation_bar.dart';
 
 import 'widgets/home_view.dart';
+import 'widgets/main_view_body.dart';
+import 'widgets/main_view_body_bloc_consumer.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -31,14 +33,7 @@ class _MainViewState extends State<MainView> {
           },
         ),
         body: SafeArea(
-          child: IndexedStack(
-            index: currentViewIndex,
-            children: const [
-              HomeView(),
-              ProductsView(),
-              CartView(),
-            ],
-          ),
+          child: MainViewBodyBlocConsumer(currentViewIndex: currentViewIndex),
         ),
       ),
     );
