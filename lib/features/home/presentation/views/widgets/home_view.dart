@@ -7,7 +7,7 @@ import 'package:fruits_hub/core/repos/products_repo/products_repo.dart';
 import 'package:fruits_hub/core/services/get_it_service.dart';
 import 'package:fruits_hub/core/widgets/fruit_item.dart';
 import 'package:fruits_hub/core/widgets/search_text_field.dart';
-import 'package:fruits_hub/features/home/presentation/views/widgets/best_selling_grid_view.dart';
+import 'package:fruits_hub/features/home/presentation/views/widgets/products_grid_view.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/best_selling_header.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/featured_item.dart';
