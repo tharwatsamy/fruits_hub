@@ -26,6 +26,10 @@ class Assets {
   /// assets/images/filter.svg
   static const String imagesFilter = "assets/images/filter.svg";
 
+  /// Assets for imagesFilter2
+  /// assets/images/filter2.svg
+  static const String imagesFilter2 = "assets/images/filter2.svg";
+
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
   static const String imagesGoogleIcon = "assets/images/google_icon.svg";
