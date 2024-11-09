@@ -10,6 +10,14 @@ class CartEntity {
     cartItems.add(cartItemEntity);
   }
 
+  double calculateTotalPrice() {
+    double totalPrice = 0;
+    for (var carItem in cartItems) {
+      totalPrice += carItem.calculateTotalPrice();
+    }
+    return totalPrice;
+  }
+
   bool isExis(ProductEntity product) {
     for (var carItem in cartItems) {
       if (carItem.productEntity == product) {
