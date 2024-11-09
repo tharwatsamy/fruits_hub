@@ -10,6 +10,10 @@ class CartEntity {
     cartItems.add(cartItemEntity);
   }
 
+  removeCarItem(CarItemEntity carItem) {
+    cartItems.remove(carItem);
+  }
+
   double calculateTotalPrice() {
     double totalPrice = 0;
     for (var carItem in cartItems) {
