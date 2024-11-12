@@ -6,10 +6,14 @@ import 'package:fruits_hub/features/home/presentation/views/main_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 
+import '../../features/checkout/presentation/views/checkout_view.dart';
+
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.routeName:
       return MaterialPageRoute(builder: (context) => const SplashView());
+    case CheckoutView.routeName:
+      return MaterialPageRoute(builder: (context) => const CheckoutView());
     case BestSellingView.routeName:
       return MaterialPageRoute(builder: (context) => const BestSellingView());
     case SigninView.routeName:
