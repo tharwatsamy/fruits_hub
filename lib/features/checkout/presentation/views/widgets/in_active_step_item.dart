@@ -3,17 +3,20 @@ import 'package:fruits_hub/core/utils/app_colors.dart';
 import 'package:fruits_hub/core/utils/app_text_styles.dart';
 
 class InActiveStepItem extends StatelessWidget {
-  const InActiveStepItem({super.key});
+  const InActiveStepItem({super.key, required this.index, required this.text});
 
+  final String index;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const CircleAvatar(
+        CircleAvatar(
           radius: 10,
-          backgroundColor: Color(0xFFF2F3F3),
+          backgroundColor: const Color(0xFFF2F3F3),
           child: Text(
-            '2',
+            index,
             style: TextStyles.semiBold13,
           ),
         ),
@@ -21,7 +24,7 @@ class InActiveStepItem extends StatelessWidget {
           width: 4,
         ),
         Text(
-          'الشحن',
+          text,
           style: TextStyles.semiBold13.copyWith(
             color: const Color(0xFFAAAAAA),
           ),
