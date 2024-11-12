@@ -12,6 +12,7 @@ class ShippingSection extends StatelessWidget {
           height: 33,
         ),
         ShippingItem(
+          isSelected: true,
           title: 'الدفع عند الاستلام',
           subTitle: 'التسليم من المكان',
           price: '40',
@@ -20,6 +21,7 @@ class ShippingSection extends StatelessWidget {
           height: 16,
         ),
         ShippingItem(
+          isSelected: false,
           title: 'الدفع اونلاين',
           subTitle: 'يرجي تحديد طريقه الدفع',
           price: '40',
