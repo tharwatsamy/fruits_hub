@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/active_step_item.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/in_active_step_item.dart';
+import 'package:fruits_hub/features/checkout/presentation/views/widgets/step_item.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/active_item.dart';
 
 class CheckoutSteps extends StatelessWidget {
@@ -11,7 +12,8 @@ class CheckoutSteps extends StatelessWidget {
     return Row(
       children: List.generate(getSteps().length, (index) {
         return Expanded(
-          child: InActiveStepItem(
+          child: StepItem(
+            isActive: false,
             index: index.toString(),
             text: getSteps()[index],
           ),
