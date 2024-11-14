@@ -44,6 +44,7 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
             height: 20,
           ),
           CheckoutSteps(
+            pageController: pageController,
             currentPageIndex: currentPageIndex,
           ),
           Expanded(
