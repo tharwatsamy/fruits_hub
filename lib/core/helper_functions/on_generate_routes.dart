@@ -7,13 +7,17 @@ import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_v
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 
 import '../../features/checkout/presentation/views/checkout_view.dart';
+import '../../features/home/domain/entites/car_item_entity.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.routeName:
       return MaterialPageRoute(builder: (context) => const SplashView());
     case CheckoutView.routeName:
-      return MaterialPageRoute(builder: (context) => const CheckoutView());
+      return MaterialPageRoute(
+          builder: (context) => CheckoutView(
+                cartItems: settings.arguments as List<CartItemEntity>,
+              ));
     case BestSellingView.routeName:
       return MaterialPageRoute(builder: (context) => const BestSellingView());
     case SigninView.routeName:

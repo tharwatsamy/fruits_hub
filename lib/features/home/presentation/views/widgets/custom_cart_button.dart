@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub/core/helper_functions/build_error_bar.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/checkout_view.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
@@ -17,7 +18,15 @@ class CustomCartButton extends StatelessWidget {
       builder: (context, state) {
         return CustomButton(
           onPressed: () {
-            Navigator.pushNamed(context, CheckoutView.routeName);
+            if (context.read<CartCubit>().cartEntity.cartItems.isNotEmpty) {
+              Navigator.pushNamed(
+                context,
+                CheckoutView.routeName,
+                arguments: context.read<CartCubit>().cartEntity.cartItems,
+              );
+            } else {
+              showErrorBar(context, 'لا يوجد منتجات في السلة');
+            }
           },
           text:
               'الدفع  ${context.watch<CartCubit>().cartEntity.calculateTotalPrice()} جنيه',
