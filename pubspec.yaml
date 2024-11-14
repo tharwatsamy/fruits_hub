@@ -46,6 +46,7 @@ dependencies:
   get_it: ^7.7.0
   google_sign_in: ^6.2.1
   modal_progress_hud_nsn: ^0.5.1
+  provider: ^6.1.2
   shared_preferences: ^2.2.3
   sign_in_with_apple: ^6.1.1
   skeletonizer: ^1.4.2
