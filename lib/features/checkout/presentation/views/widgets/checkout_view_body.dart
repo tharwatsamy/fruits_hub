@@ -19,8 +19,7 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   @override
   void initState() {
     pageController = PageController();
-    pageController.addListener(()
-    {
+    pageController.addListener(() {
       setState(() {
         currentPageIndex = pageController.page!.toInt();
       });
@@ -52,16 +51,29 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
           ),
           CustomButton(
               onPressed: () {
-                pageController.animateToPage(2,
+                pageController.animateToPage(currentPageIndex + 1,
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.bounceIn);
               },
-              text: 'التالي'),
+              text: getNextButtonText(currentPageIndex)),
           const SizedBox(
             height: 32,
           ),
         ],
       ),
     );
+  }
+
+  String getNextButtonText(int currentPageIndex) {
+    switch (currentPageIndex) {
+      case 0:
+        return 'التالي';
+      case 1:
+        return 'التالي';
+      case 2:
+        return 'الدفع عبر PayPal';
+      default:
+        return 'التالي';
+    }
   }
 }
