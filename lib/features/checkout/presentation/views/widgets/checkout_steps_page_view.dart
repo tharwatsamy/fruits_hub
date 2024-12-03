@@ -9,8 +9,10 @@ class CheckoutStepsPageView extends StatelessWidget {
   const CheckoutStepsPageView({
     super.key,
     required this.pageController,
+    required this.formKey,
   });
 
+  final GlobalKey<FormState> formKey;
   final PageController pageController;
 
   @override
@@ -31,7 +33,9 @@ class CheckoutStepsPageView extends StatelessWidget {
   List<Widget> getPages() {
     return [
       const ShippingSection(),
-      const AddressInputSection(),
+      AddressInputSection(
+        formKey: formKey,
+      ),
       const PaymentSection(),
     ];
   }
