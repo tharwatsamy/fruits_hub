@@ -17,7 +17,6 @@ class CheckoutSteps extends StatelessWidget {
   final int currentPageIndex;
   final PageController pageController;
   @override
-
   Widget build(BuildContext context) {
     return Row(
       children: List.generate(getSteps().length, (index) {
