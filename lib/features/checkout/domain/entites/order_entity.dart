@@ -5,7 +5,7 @@ import 'package:fruits_hub/features/home/presentation/views/widgets/cart_item.da
 
 class OrderEntity {
   final CartEntity cartEntity;
-  final bool? payWithCash;
+  bool? payWithCash;
   final ShippingAddressEntity? shippingAddressEntity;
   OrderEntity(
     this.cartEntity, {

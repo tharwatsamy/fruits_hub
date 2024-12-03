@@ -15,6 +15,7 @@ class _ShippingSectionState extends State<ShippingSection> {
   int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
+    var orderEntity = context.read<OrderEntity>();
     return Column(
       children: [
         const SizedBox(
@@ -24,6 +25,7 @@ class _ShippingSectionState extends State<ShippingSection> {
           onTap: () {
             selectedIndex = 0;
             setState(() {});
+            orderEntity.payWithCash = true;
           },
           isSelected: selectedIndex == 0,
           title: 'الدفع عند الاستلام',
@@ -39,6 +41,7 @@ class _ShippingSectionState extends State<ShippingSection> {
           onTap: () {
             selectedIndex = 1;
             setState(() {});
+            orderEntity.payWithCash = false;
           },
           isSelected: selectedIndex == 1,
           title: 'الدفع اونلاين',
