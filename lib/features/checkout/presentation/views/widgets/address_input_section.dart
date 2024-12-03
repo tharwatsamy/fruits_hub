@@ -6,18 +6,19 @@ import 'package:fruits_hub/core/widgets/custom_text_field.dart';
 import '../../../domain/entites/order_entity.dart';
 
 class AddressInputSection extends StatelessWidget {
-  const AddressInputSection({super.key, required this.formKey, required this.valueListenable});
+  const AddressInputSection(
+      {super.key, required this.formKey, required this.valueListenable});
 
   final GlobalKey<FormState> formKey;
-  final  ValueListenable<AutovalidateMode> valueListenable;
+  final ValueListenable<AutovalidateMode> valueListenable;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: ValueListenableBuilder<AutovalidateMode>(
-        valueListenable: valueListenable ,
-        builder: (context, value, child) =>  Form(
+        valueListenable: valueListenable,
+        builder: (context, value, child) => Form(
           key: formKey,
-          autovalidateMode:value,
+          autovalidateMode: value,
           child: Column(
             children: [
               const SizedBox(

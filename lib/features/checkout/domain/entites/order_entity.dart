@@ -6,10 +6,10 @@ import 'package:fruits_hub/features/home/presentation/views/widgets/cart_item.da
 class OrderEntity {
   final CartEntity cartEntity;
   bool? payWithCash;
-  ShippingAddressEntity? shippingAddressEntity = ShippingAddressEntity();
+  ShippingAddressEntity shippingAddressEntity;
   OrderEntity(
     this.cartEntity, {
     this.payWithCash,
-    this.shippingAddressEntity,
+    required this.shippingAddressEntity
   });
 }
