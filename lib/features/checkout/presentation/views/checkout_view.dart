@@ -21,10 +21,9 @@ class CheckoutView extends StatelessWidget {
         showNotification: false,
       ),
       body: Provider.value(
-        value: OrderEntity(
-          cartEntity,
-          shippingAddressEntity: ShippingAddressEntity(),
-        ),
+        value: OrderEntity(cartEntity,
+            shippingAddressEntity: ShippingAddressEntity(),
+         ),
         child: const CheckoutViewBody(),
       ),
     );

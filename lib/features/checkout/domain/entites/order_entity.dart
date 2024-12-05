@@ -7,9 +7,6 @@ class OrderEntity {
   final CartEntity cartEntity;
   bool? payWithCash;
   ShippingAddressEntity shippingAddressEntity;
-  OrderEntity(
-    this.cartEntity, {
-    this.payWithCash,
-    required this.shippingAddressEntity
-  });
+  OrderEntity(this.cartEntity,
+      {this.payWithCash, required this.shippingAddressEntity});
 }

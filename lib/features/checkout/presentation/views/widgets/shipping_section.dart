@@ -11,7 +11,8 @@ class ShippingSection extends StatefulWidget {
   State<ShippingSection> createState() => _ShippingSectionState();
 }
 
-class _ShippingSectionState extends State<ShippingSection> with AutomaticKeepAliveClientMixin{
+class _ShippingSectionState extends State<ShippingSection>
+    with AutomaticKeepAliveClientMixin {
   int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class _ShippingSectionState extends State<ShippingSection> with AutomaticKeepAli
           title: 'الدفع عند الاستلام',
           subTitle: 'التسليم من المكان',
           price: (context.read<OrderEntity>().cartEntity.calculateTotalPrice() +
-                  40)
+                  30)
               .toString(),
         ),
         const SizedBox(
@@ -56,8 +57,7 @@ class _ShippingSectionState extends State<ShippingSection> with AutomaticKeepAli
       ],
     );
   }
-  
-  @override
 
+  @override
   bool get wantKeepAlive => true;
 }
