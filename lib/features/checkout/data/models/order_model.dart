@@ -41,15 +41,4 @@ class OrderModel {
 }
 
 
-
-// totall price 
-// uid 
-// shipping adddress  
-//{
-
-//} 
-// List<products> = [
-
-// ]
-
 // payment method 
