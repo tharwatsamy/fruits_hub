@@ -7,6 +7,8 @@ import 'package:fruits_hub/core/utils/backend_endpoint.dart';
 import 'package:fruits_hub/features/checkout/data/models/order_model.dart';
 import 'package:fruits_hub/features/checkout/domain/entites/order_entity.dart';
 
+import '../../services/get_it_service.dart';
+
 class OrdersRepoImpl implements OrdersRepo {
   final DatabaseService fireStoreService;
 
