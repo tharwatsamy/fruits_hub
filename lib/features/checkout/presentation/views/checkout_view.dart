@@ -6,6 +6,7 @@ import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruits_hub/features/checkout/domain/entites/order_entity.dart';
 import 'package:fruits_hub/features/checkout/domain/entites/shipping_address_entity.dart';
 import 'package:fruits_hub/features/checkout/presentation/manger/add_order_cubit/add_order_cubit.dart';
+import 'package:fruits_hub/features/checkout/presentation/views/widgets/add_order_cubit_bloc_builder.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/checkout_view_body.dart';
 import 'package:fruits_hub/features/home/domain/entites/car_item_entity.dart';
 import 'package:fruits_hub/features/home/domain/entites/cart_entity.dart';
@@ -36,7 +37,9 @@ class CheckoutView extends StatelessWidget {
             cartEntity,
             shippingAddressEntity: ShippingAddressEntity(),
           ),
-          child: const CheckoutViewBody(),
+          child: const AddOrderCubitBlocBuilder(
+            child: CheckoutViewBody(),
+          ),
         ),
       ),
     );
