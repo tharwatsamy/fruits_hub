@@ -85,5 +85,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'fruit-hub-69f2d.appspot.com',
     measurementId: 'G-H5TWBX1HLY',
   );
-
 }

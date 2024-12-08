@@ -38,7 +38,6 @@ class FireStoreService implements DatabaseService {
           var limit = query['limit'];
           data = data.limit(limit);
         }
-
       }
       var result = await data.get();
       return result.docs.map((e) => e.data()).toList();

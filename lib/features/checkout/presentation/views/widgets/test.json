@@ -1,0 +1,29 @@
+{
+    "amount": {
+      "total": "70",
+      "currency": "USD",
+      "details": {
+        "subtotal": "70",
+        "shipping": "30",
+        "shipping_discount": 0
+      }
+    },
+    "description": "The payment transaction description.",
+ 
+    "item_list": {
+      "items": [
+        {
+          "name": "Apple",
+          "quantity": 4,
+          "price": "5",
+          "currency": "USD"
+        },
+        {
+          "name": "Pineapple",
+          "quantity": 5,
+          "price": "10",
+          "currency": "USD"
+        }
+      ]
+    }
+  }

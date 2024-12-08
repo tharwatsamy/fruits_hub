@@ -38,8 +38,8 @@ class ActiveItem extends StatelessWidget {
             ),
             Text(
               text,
-              style: TextStyles.semiBold11
-                  .copyWith(color: AppColors.primaryColor),
+              style:
+                  TextStyles.semiBold11.copyWith(color: AppColors.primaryColor),
             )
           ],
         ),

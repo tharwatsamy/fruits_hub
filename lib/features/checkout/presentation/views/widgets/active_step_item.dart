@@ -23,7 +23,7 @@ class ActiveStepItem extends StatelessWidget {
           width: 4,
         ),
         Text(
-         text,
+          text,
           style: TextStyles.bold13.copyWith(color: AppColors.primaryColor),
         )
       ],

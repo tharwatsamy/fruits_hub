@@ -6,14 +6,14 @@ class ShippingAddressEntity {
   String? email;
   String? floor;
 
-  ShippingAddressEntity(
-      {this.name,
-      this.phone,
-      this.address,
-      this.floor,
-      this.city,
-      this.email,
-    });
+  ShippingAddressEntity({
+    this.name,
+    this.phone,
+    this.address,
+    this.floor,
+    this.city,
+    this.email,
+  });
 
   @override
   String toString() {

@@ -40,5 +40,4 @@ class OrderModel {
       };
 }
 
-
-// payment method 
+// payment method

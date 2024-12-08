@@ -40,7 +40,6 @@ class SigninCubit extends Cubit<SigninState> {
     );
   }
 
-
   Future<void> signinWithApple() async {
     emit(SigninLoading());
     var result = await authRepo.signinWithApple();

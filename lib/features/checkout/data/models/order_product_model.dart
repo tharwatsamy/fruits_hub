@@ -26,7 +26,6 @@ class OrderProductModel {
     );
   }
 
-
   toJson() {
     return {
       'name': name,
