@@ -10,13 +10,13 @@ import 'package:fruits_hub/features/checkout/domain/entites/order_entity.dart';
 import '../../services/get_it_service.dart';
 
 class OrdersRepoImpl implements OrdersRepo {
-  final DatabaseService fireStoreService;
+  final DatabaseService dataBaseService;
 
-  OrdersRepoImpl(this.fireStoreService);
+  OrdersRepoImpl(this.dataBaseService);
   @override
   Future<Either<Failure, void>> addOrder({required OrderEntity order}) async {
     try {
-      await fireStoreService.addData(
+      await dataBaseService.addData(
         path: BackendEndpoint.addOrder,
         data: OrderModel.fromEntity(order).toJson(),
       );
