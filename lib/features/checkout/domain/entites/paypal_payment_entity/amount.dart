@@ -10,14 +10,13 @@ class Amount {
 
   Amount({this.total, this.currency, this.details});
 
-  factory Amount.fromEntity(OrderEntity entity) {
+  factory Amount.fromEntity(OrderInputEntity entity) {
     return Amount(
       total: entity.calculateTotalPriceAfterDiscountAndShipping().toString(),
       currency: getCurrency(),
       details: DetailsEntity.fromEntity(entity),
     );
   }
-
 
   toJson() => {
         'total': total,

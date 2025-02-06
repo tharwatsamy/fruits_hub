@@ -3,12 +3,12 @@ import 'package:fruits_hub/features/home/domain/entites/car_item_entity.dart';
 import 'package:fruits_hub/features/home/domain/entites/cart_entity.dart';
 import 'package:fruits_hub/features/home/presentation/views/widgets/cart_item.dart';
 
-class OrderEntity {
+class OrderInputEntity {
   final String uID;
   final CartEntity cartEntity;
   bool? payWithCash;
   ShippingAddressEntity shippingAddressEntity;
-  OrderEntity(
+  OrderInputEntity(
     this.cartEntity, {
     this.payWithCash,
     required this.shippingAddressEntity,
@@ -33,12 +33,8 @@ class OrderEntity {
         calcualteShippingDiscount();
   }
 
-
-    @override
+  @override
   String toString() {
-   
     return 'OrderEntity{uID: $uID, cartEntity: $cartEntity, payWithCash: $payWithCash, shippingAddressEntity: $shippingAddressEntity}';
-
   }
-
 }
